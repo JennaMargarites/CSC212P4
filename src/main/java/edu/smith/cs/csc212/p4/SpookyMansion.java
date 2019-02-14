@@ -76,7 +76,7 @@ public class SpookyMansion implements GameWorld {
 				+ "By channeling the power of comradery you summon the ghost of Karl Marx.\n"
 				+ "With the ghost of Karl Marx, you are able to overthrow capitalism just in time to\n"
 				+"save the environment.\n"
-				+ "You marry a nice bat and live a long happy life on a commune in Maine."));
+				+ "You live a long happy life on a commune in Maine."));
 		
 		int hallwayDepth = 5;
 		int lastHallwayPart = hallwayDepth - 1;
