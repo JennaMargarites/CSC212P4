@@ -36,7 +36,7 @@ public class SpookyMansion implements GameWorld {
 						"You get the sense a secret is nearby, but you only see the stairs you came from."
 						));
 		basement.addExit(new Exit("entranceHall", "There are stairs leading up."));
-		basement.addExit(new Exit("unionizedBats", "You hear the sounds of workeres unionizing in a far corner."));
+		basement.addExit(new Exit("unionizedBats", "You hear the sounds of workers unionizing in a far corner."));
 
 		Place attic = insert(Place.create("attic",
 				"Something rustles in the rafters as you enter the attic. Creepy.\n" + "It's big up here."));
@@ -68,7 +68,15 @@ public class SpookyMansion implements GameWorld {
 		
 		Place unionizedBats = insert(Place.create("unionizedBats", "You see a bunch of bats griping about capitalism.\n"
 				+ "They tell you that the working conditions in this mansion are terrible.\n" 
-				+ 
+				+ "There is a statue of Karl Marx in the center of them."));
+		unionizedBats.addExit(new Exit("basement", "Turn around because you are indoctrinated by the capitalistic system."));
+		unionizedBats.addExit(new Exit("enlightenment", "Join them in overthrowing Elon Musk and his bois."));
+		
+		Place enlightenment = insert(Place.terminal("enlightenment", "You and your fellow bat-friends band together.\n"
+				+ "By channeling the power of comradery you summon the ghost of Karl Marx.\n"
+				+ "With the ghost of Karl Marx, you are able to overthrow capitalism just in time to\n"
+				+"save the environment.\n"
+				+ "You marry a nice bat and live a long happy life on a commune in Maine."));
 		
 		int hallwayDepth = 5;
 		int lastHallwayPart = hallwayDepth - 1;
